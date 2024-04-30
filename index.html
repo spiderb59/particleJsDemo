@@ -14,7 +14,9 @@
 
 	<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 	<script>
-		const messages = [
+		function displayMessage() {
+			const name = document.getElementById("name").value;
+			const messages = [
 			  "Believe in yourself and all that you are. Know that there is something inside you that is greater than any obstacle.",
 			  "The only way to do great work is to love what you do.",
 			  "Success is not final, failure is not fatal: it is the courage to continue that counts.",
@@ -91,6 +93,10 @@
 			"A person who never made a mistake never tried anything new.",
 			"Success is not the key to happiness. Happiness is the key to success. If you love what you are doing, you will be successful.",
 			];
+			let message = messages[Math.floor(Math.random() * messages.length)];
+			document.getElementById("greeting").textContent = `Hello ${name}, ${message} Happy New Year 2081!!`;
+			
+		}
 	</script>
 </body>
 </html>
